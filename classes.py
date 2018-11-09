@@ -1,8 +1,7 @@
 class Rna(str):
     def __init__(self, sequence):
         self.sequence = sequence.upper()
-        self.nucleotides = set('ACGTU')
-        if len(set(self.sequence)) <= 4 and set(self.sequence) <= self.nucleotides:
+        if set(self.sequence) <=  set('ACGTU'):
             pass
         else:
             raise ValueError('Your sequence contains inappropriate nucleotides')
