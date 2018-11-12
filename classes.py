@@ -19,5 +19,8 @@ class Dna(Rna):
         self.complement_Dna = self.maketrans('ATCG', 'TAGC')
         return self.sequence.translate(self.complement_Dna)[::-1]
 
-    def transcribe(self):
+    def transcribe_template(self):
         return Rna.reverse_complement(self)
+
+    def transcribe(self):
+        return self.sequence.replace("T", "U")
